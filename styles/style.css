@@ -1,3 +1,141 @@
-body{
-    color:red;
-}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  header {
+    position: relative;
+    margin-top: 50px;
+    min-width: 666px;
+  }
+  
+  @media (max-width: 1263px) {
+    .decoHeader {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1112px) {
+    .decoHeader {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .decoHeader {
+      display: none;
+    }
+  }
+  
+  .decoHeader {
+    position: absolute;
+    right: 50px;
+    top: 0;
+  }
+  
+  h1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: last baseline;
+    font-family: "Soyuz Grotesk Bold";
+    font-size: 160px;
+    line-height: 60px;
+    white-space: nowrap;
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  
+  h1 span {
+    font-size: 35px;
+    margin: 0;
+    display: block;
+  }
+  
+  h2 {
+    font-family: "Soyuz Grotesk Bold";
+    margin: 0;
+    max-width: 800px;
+    font-size: 65px;
+    line-height: 60px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+  
+    & i {
+      color: red;
+      font-style: normal;
+      position: relative;
+  
+      & img {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        height: 40px;
+        width: auto;
+      }
+    }
+  }
+  
+  main {
+    max-width: 1300px;
+    min-width: 666px;
+
+  }
+  
+  .menu {
+    text-align: center;
+    display: flex;
+    max-width: 800px;
+    margin-bottom: 15px;
+  
+    & a {
+      text-decoration: none;
+      color: black;
+      font-family: Inter;
+      font-weight: 700;
+    }
+  
+    & a:hover {
+      color: #7d1b1b;
+    }
+  }
+  
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: space-between;
+    & img {
+      height: 150px;
+      width: 210px;
+    }
+  }
+  
+  .store-item {
+    width: 210px;
+  
+    & h3{
+      font-family: Inter;
+      font-weight: 700;
+    }
+  
+    & p{
+      font-family: Inter;
+      font-weight: 500;
+      color:#05570D;
+    }
+  
+    & p::after{
+      content: " р.";
+    }
+  
+    & p::before{
+      content: "- ";
+    }
+  }
+  

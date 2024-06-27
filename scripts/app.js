@@ -2,10 +2,8 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-let btn = document.querySelector("button");
+let btn = document.querySelector("a");
 
 btn.onclick = function () {
-  let goida = document.querySelector("h1");
-  goida.style.display = "none";
-  tg.sendData("Goida stealed");
+  tg.sendData(btn.text);
 };
